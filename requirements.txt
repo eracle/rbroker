@@ -1,0 +1,12 @@
+arrow==0.10.0
+blessed==1.14.2
+Django==1.11.4
+django-picklefield==1.0.0
+django-q==0.8.0
+djangorestframework==3.6.4
+future==0.16.0
+psycopg2==2.7.3.1
+python-dateutil==2.6.1
+pytz==2017.2
+six==1.10.0
+wcwidth==0.1.7

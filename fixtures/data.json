@@ -1,0 +1,58 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$0p1Wsp8esrHY$QOOtjzGcUqYmb8xMFK7Tp/9hxEpGG0uA3yIkON0gprw=",
+        "last_login": "2017-09-02T11:09:55.754Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-09-01T09:53:05.757Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.task",
+    "pk": 1,
+    "fields": {
+        "uuid": "a10543b9-8307-4e3e-ba22-d16f90a78ce8",
+        "state": 1,
+        "device": null,
+        "owner": 1
+    }
+},
+{
+    "model": "core.task",
+    "pk": 2,
+    "fields": {
+        "uuid": "b653cd92-37cb-41e0-81ae-d78caca01405",
+        "state": 2,
+        "device": 1,
+        "owner": 1
+    }
+},
+{
+    "model": "core.task",
+    "pk": 3,
+    "fields": {
+        "uuid": "94c581df-32dc-47c3-ad24-17866d5dcd95",
+        "state": 3,
+        "device": 1,
+        "owner": 1
+    }
+},
+{
+    "model": "core.device",
+    "pk": 1,
+    "fields": {
+        "uuid": "1db6dfa8-77a0-41cf-80da-ab0122e5efd2",
+        "customer": 1
+    }
+}
+]
