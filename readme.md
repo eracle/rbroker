@@ -40,3 +40,4 @@ python manage.py qcluster
 Then go [here](http://localhost:8000/tasks/begin/1) and begin a task by selecting a device and performing a put.
 Before 20 seconds go [here](http://localhost:8000/tasks/success/1) and put a success! or [here](http://localhost:8000/tasks/failure/1) for a fail!
 You can always check in the admin panel the state of the database [here](http://localhost:8000/admin/) (username:admin/password:adminadmin).
+Remember you can access to the list of available tasks [here](http://localhost:8000/tasks/).

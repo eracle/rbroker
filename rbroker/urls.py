@@ -21,13 +21,13 @@ from django.contrib import admin
 
 router = routers.DefaultRouter()
 
-# router.register(r'tasks', TaskListViewSet, base_name='tasks')
+router.register(r'tasks', TaskListViewSet, base_name='tasks')
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-    # url(r'^tasks', include(router.urls)),
+    url(r'^', include(router.urls)),
     url(r'^tasks/begin/(?P<pk>\w+)/?', TaskViewSet.as_view(dict(put='begin')), name='begin',),
     url(r'^tasks/success/(?P<pk>\w+)/?', TaskViewSet.as_view(dict(put='success')), name='success',),
     url(r'^tasks/failure/(?P<pk>\w+)/?', TaskViewSet.as_view(dict(put='failure')), name='failure',),
