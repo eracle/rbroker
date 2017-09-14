@@ -9,9 +9,7 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = ('id',
                   'state',
                   'device',
-                  'uuid',
                   )
         read_only_fields = ('id',
                             'state',
-                            'uuid',
                             )

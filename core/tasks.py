@@ -3,19 +3,13 @@ from django.db import transaction
 
 from core.models import Task
 
-import time
 
-from rbroker.settings import TASK_EXECUTION_TIME
-
-
-def task_timeout(task_uuid):
-
-    print('Waiting %s sec before timeout' % TASK_EXECUTION_TIME)
-    time.sleep(TASK_EXECUTION_TIME)
-
-    print('Getting task, uuid: %s' % task_uuid)
+def task_timeout(param):
+    print('Time outed task', flush=True)
     with transaction.atomic():
-        task = Task.objects.get(uuid=task_uuid)
+
+        task = Task.objects.get(pk=param)
+
         if task.state == Task.EXECUTING:
             print('Time out, task: %s' % task)
 

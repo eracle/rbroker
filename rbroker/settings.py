@@ -141,7 +141,7 @@ REST_FRAMEWORK = {
 FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures')]
 
 # maximum time that can pass before task is considered as timed out (seconds)
-TASK_EXECUTION_TIME = 20
+TASK_EXECUTION_TIME = 2
 
 Q_CLUSTER = {
     'name': 'DjangORM',

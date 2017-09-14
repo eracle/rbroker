@@ -7,12 +7,10 @@ from django.db import models
 
 
 class Device(models.Model):
-    uuid = models.UUIDField(db_index=True, primary_key=False, default=uuid.uuid4, editable=False)
     customer = models.ForeignKey(User, null=True, blank=True)
 
 
 class Task(models.Model):
-    uuid = models.UUIDField(db_index=True ,primary_key=False, default=uuid.uuid4, editable=False)
 
     AVAILABLE = 1
     EXECUTING = 2

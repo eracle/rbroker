@@ -21,7 +21,6 @@
     "model": "core.task",
     "pk": 1,
     "fields": {
-        "uuid": "a10543b9-8307-4e3e-ba22-d16f90a78ce8",
         "state": 1,
         "device": null,
         "owner": 1
@@ -31,7 +30,6 @@
     "model": "core.task",
     "pk": 2,
     "fields": {
-        "uuid": "b653cd92-37cb-41e0-81ae-d78caca01405",
         "state": 2,
         "device": 1,
         "owner": 1
@@ -41,7 +39,6 @@
     "model": "core.task",
     "pk": 3,
     "fields": {
-        "uuid": "94c581df-32dc-47c3-ad24-17866d5dcd95",
         "state": 3,
         "device": 1,
         "owner": 1
@@ -51,7 +48,6 @@
     "model": "core.device",
     "pk": 1,
     "fields": {
-        "uuid": "1db6dfa8-77a0-41cf-80da-ab0122e5efd2",
         "customer": 1
     }
 }

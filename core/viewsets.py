@@ -1,6 +1,9 @@
+from datetime import timedelta
+
 from django.db import transaction
 from django.shortcuts import get_object_or_404
-from django_q.tasks import async
+from django.utils import timezone
+from django_q.tasks import schedule
 from rest_framework import mixins
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
@@ -10,6 +13,7 @@ from core.models import Task, Device
 from core.permissions import OwnerPermissions, DeviceOwnerPermissions
 from core.serializers import TaskSerializer
 from core.tasks import task_timeout
+from rbroker.settings import TASK_EXECUTION_TIME
 
 
 class TaskListViewSet(mixins.ListModelMixin,
@@ -43,7 +47,13 @@ class TaskViewSet(GenericViewSet):
             task.device = device
             task.save()
 
-        async(task_timeout, task.uuid)
+        print('Scheduling task')
+        schedule(
+            func='core.tasks.task_timeout',
+            schedule_type='O',
+            next_run=timezone.now() + timedelta(seconds=TASK_EXECUTION_TIME),
+            param=task.pk
+        )
 
         return Response(data=self.get_serializer(task).data)
 
